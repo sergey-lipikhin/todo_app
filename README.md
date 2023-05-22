@@ -1,44 +1,34 @@
-# React Todo App with API (complete)
+# Todo Application
+[DEMO LINK](https://sergey-lipikhin.github.io/react-todo-app/)
 
-It is the third part of the React Todo App with API.
+Web application that allows users to create and manage a list of tasks. Users can add new tasks, mark them as completed, edit existing tasks, and delete tasks they no longer need. The application also includes a filtering system that allows users to view only completed or active tasks.
 
-Take your code implemented for [Add and Delete](https://github.com/mate-academy/react_todo-app-add-and-delete)
-and implement the ability to toggle and rename todos.
+## Built with
 
-> Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+- HTML: to create the structure and content
+- CSS: to style and add animations
+- React: the main frontend library to create the user interface and manage the application state
+- TypeScript: to add static typing to the project and improve code maintainability
+- fetchClient: to communicate with the [backend API](https://mate-academy.github.io/fe-students-api) and retrieve or update Todo items
+- [React Transition Group](https://reactcommunity.org/react-transition-group/transition-group): to add smooth animations to the Todo list items when they are added or removed
 
-## Toggling a todo status
+## Features
 
-Toggle the `completed` status on `TodoStatus` change:
+- ➕ Add a new todo input a title in the input field and press Enter. Each new task will be given a unique ID.
+- ✅ Mark as completed simply check the checkbox next to task. Conversely, uncheck the checkbox to mark it as not completed.
+- ✎ Edit: double-click on a task to activate the edit mode, change title and then press Enter or click outside the field to save the changes.
+- ✖️ Delete: click on the x button next to the task. Alternatively, make the title empty and save changes.
+- 🔃 Filter todos: filter tasks by completion status by clicking on the All, Active, or Completed buttons.
+- 🧹 Clear all completed todos: click on the Clear completed button.
+- :eyes: View the total number of uncompleted tasks.
 
-- covered the todo with a loader overlay while wating for API response;
-- the status should be changed on success;
-- show the `Unable to update a todo` notification in case of API error.
+## Notification
 
-Add the ability to toggle the completed status of all the todos with the `toggleAll` checkbox:
-
-- `toggleAll` button should have `active` class only if all the todos are completed;
-- `toggleAll` click changes its status to the oppsite one, and set it to all the todos;
-- it should work the same as several individual updates of the todos which statuses were actually changed;
-- do send requests for the todos that were not changed;
-
-## Renaming a todo
-
-Implement the ability to edit a todo title on double click:
-
-- show the edit form instead of the title and remove button;
-- saves changes on the form submit (just press `Enter`);
-- save changes when the field loses focus (`onBlur`);
-- if new title is the same as the old one just cancel editing;
-- cancel editing on `Esс` key `keyup` event;
-- if the new title is empty delete the todo the same way the `x` button does it;
-- if the title was changed show the loader while waiting for the API response;
-- update the todo title on success;
-- show `Unable to update a todo` in case of API error;
-- or the deletion error message if we tried to delete the todo.
-
-## Instructions
-
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://sergey-lipikhin.github.io/react_todo-app-with-api/) and add it to the PR description.
+If an error occurs while interacting with the API or due to an inappropriate user action, the corresponding notification message will be displayed at the bottom of the screen and then hidden after 3 seconds.
+Possible error messages:
+- An error occurred while loading todos
+- Title can't be empty
+- Unable to add a todo
+- Unable to delete a todo
+- Unable to delete one of these todos
+- Unable to update a todo
