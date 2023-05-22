@@ -1,5 +1,5 @@
 # Todo Application
-[DEMO LINK](https://sergey-lipikhin.github.io/react-todo-app/)
+[DEMO LINK](https://sergey-lipikhin.github.io/todo_app/)
 
 Web application that allows users to create and manage a list of tasks. Users can add new tasks, mark them as completed, edit existing tasks, and delete tasks they no longer need. The application also includes a filtering system that allows users to view only completed or active tasks.
 
