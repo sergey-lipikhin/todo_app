@@ -46,7 +46,7 @@ export const App: React.FC = () => {
       prevTodos.filter(todo => todo.id !== todoId)
     ));
   };
-dsa
+
   const updateTodoLocal = (
     todoId: number,
     updatedData: TodoDataToUpdate,
